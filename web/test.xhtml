@@ -1,0 +1,65 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <f:view contentType="text/html">
+        <h:head>
+            <f:facet name="crearCuenta">
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                <title>Crear Cuenta</title>
+                <h:outputStylesheet library="css" name="index.css"></h:outputStylesheet>
+            </f:facet>
+        </h:head>
+
+        <h:body>
+            <div id="main-header">
+                <a id="logo-header">
+                    <span class="site-name">LS Len</span>
+                </a>
+                
+                <ul class="nav">
+                    <li><a href="index.xhtml">Salir</a></li>
+                         <li><a href="contenidoTemas.xhtml">Regresar</a></li>
+                        
+                    </ul>
+                
+            </div>
+
+
+            <div id="boxDos">
+
+                <h:form id="formulario-evaluacion" >
+                    <h:panelGrid columns="1">
+                        <div>
+                            <h:outputText value="1. Identifique la siguiente expresión"/>
+                            <img src="resources/img/frases/paraque.png"></img>
+                            <p:selectOneRadio id="rb" value="#{JSFManagedBean.usuario.capacidadespecial}">
+                                <f:selectItem itemLabel="¿dónde?" itemValue="¿dónde?"></f:selectItem>
+                                <f:selectItem itemLabel="¿para qué?" itemValue="¿para qué?"></f:selectItem>
+                                <f:selectItem itemLabel="¿qué dice?" itemValue="¿qué dice?"></f:selectItem>
+                                <f:selectItem itemLabel="¿qué?" itemValue="¿qué?"></f:selectItem>
+                            </p:selectOneRadio>
+                        </div>
+
+
+                        <p:commandButton value="Grabar" id="btnGrabarUser" action="#{JSFManagedBean.grabarUsuario()}"/>
+                    </h:panelGrid>
+
+                </h:form>
+            </div>
+
+            <footer id="main-footer-contenido">
+                <p id="footer-text">&copy; 2022 Fausto Torres</p>
+
+            </footer>
+
+
+
+        </h:body>
+
+    </f:view>
+</html>
+

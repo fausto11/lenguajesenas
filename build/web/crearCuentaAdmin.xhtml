@@ -1,0 +1,82 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:ui="http://java.sun.com/jsf/facelets"
+      xmlns:p="http://primefaces.org/ui">
+
+    <f:view contentType="text/html">
+        <h:head>
+            <f:facet name="crearCuenta">
+                <meta content='text/html; charset=UTF-8' http-equiv="Content-Type"/>
+                <title>Crear Cuenta</title>
+                <h:outputStylesheet library="css" name="index.css"></h:outputStylesheet>
+            </f:facet>
+        </h:head>
+
+        <h:body>
+            <div id="main-header">
+                <a id="logo-header">
+                    <span class="site-name">LS Len</span>
+                </a>
+                
+                <ul class="nav">
+                        <li><a>Registrarse</a></li>
+                        <li><a href="temasAdmin.xhtml">Contenido</a></li>
+                    </ul>
+                
+            </div>
+            <div class="boxDos">
+                <h:form id="formulario-registro" >
+                    <h:panelGrid columns="2">
+                        <h:outputText value="Id Usuario:"/>
+                        <p:inputText value="#{JSFManagedBean.usuario.idusuario}"/>
+                        <h:outputText value="Nombre:"/>
+                        <p:inputText value="#{JSFManagedBean.usuario.nombre}"/>
+                        <h:outputText value="Apellido:"/>
+                        <p:inputText value="#{JSFManagedBean.usuario.apellido}"/> 
+                        <h:outputText value="Correo:"/>
+                        <p:inputText value="#{JSFManagedBean.usuario.correo}"/>                                    
+                        <h:outputText value="Contraseña:"/>
+                        <p:password value="#{JSFManagedBean.usuario.contrasena}" feedback="true|false"></p:password>
+
+                        <h:outputText value="Id Rol:"/>
+                        <p:selectOneMenu id="tipoUsuario" value="#{JSFManagedBean.idRole}">
+                            <f:selectItem itemLabel="Opcion" itemValue=""></f:selectItem>
+                            <f:selectItem  itemLabel="USER" itemValue="USER"></f:selectItem>
+                            <f:selectItem  itemLabel="ADMIN" itemValue="ADMIN"></f:selectItem>
+                        </p:selectOneMenu>
+                        <h:outputText value="Fecha Nacimiento:"/>
+                        <p:calendar value="#{JSFManagedBean.usuario.fechanacimiento}"
+                                    showOn="button"
+                                    navigator="true"
+                                    yearRange="1900"  
+                                    pattern="MM/dd/yyyy"
+                                    ></p:calendar>
+
+                        <h:outputText value="Género:"/>
+                        <p:selectOneRadio id="rg" value="#{JSFManagedBean.usuario.genero}">
+                            <f:selectItem itemLabel="Masculino" itemValue="Masculino"></f:selectItem>
+                            <f:selectItem itemLabel="Femenino" itemValue="Femenino"></f:selectItem>
+                        </p:selectOneRadio>
+                        <h:outputText value="Capacidad especial:"/>
+                        <p:selectOneRadio id="rb" value="#{JSFManagedBean.usuario.capacidadespecial}">
+                            <f:selectItem itemLabel="Si" itemValue="Si"></f:selectItem>
+                            <f:selectItem itemLabel="No" itemValue="No"></f:selectItem>
+                        </p:selectOneRadio>
+
+                        <p:commandButton value="Grabar" id="btnGrabarUser" action="#{JSFManagedBean.grabarUsuario()}"/>
+                    </h:panelGrid>
+
+                </h:form>
+            </div>
+            <footer id="main-footer">
+                <p id="footer-text">&copy; 2022 Fausto Torres</p>
+
+            </footer>
+
+        </h:body>
+
+    </f:view>
+</html>
+

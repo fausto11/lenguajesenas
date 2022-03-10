@@ -1,0 +1,56 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Contenido</title>
+        <h:outputStylesheet library="css" name="index.css"></h:outputStylesheet>
+    </h:head>
+    <h:body>
+        <div id="main-header">
+            <a id="logo-header">
+                <span class="site-name">LS Len</span>
+            </a>
+           
+            <ul class="nav">
+                    <li><a href="index.xhtml">Salir</a></li>
+                </ul>
+            
+        </div>
+
+
+        <div id="boxDos">
+            <p:tabView id="tabUno" orientation="left" dynamic="true">
+                <p:tab id="tab-button" title="Abecedario">
+                    <div id="imagen-tab">
+                        <img src="https://cdn.ipadizate.com/2022/02/Apps-para-aprender-el-abecedario-desde-iPhone.jpg"></img>
+                        <p>Apenderas a Reconocer el Alfabeto</p>
+                    </div>   
+                    <div>
+                        <p:button value="Ir a Contenido" href="contenidoTemas.xhtml" styleClass="ui-button-info"></p:button>   
+                    </div>
+                </p:tab>
+                <p:tab id="tab-button" title="Animales" >
+                    <h:outputText value="Ipsum" />
+                </p:tab>
+                <p:tab id="tab-button" title="Frutas">
+                    <h:outputText value="Dolor" />
+                </p:tab>
+                <p:tab id="tab-button" title="Frases">
+                    <h:outputText value="Dolor" />
+                </p:tab>
+            </p:tabView>
+
+        </div>
+
+        <footer id="main-footer-contenido">
+            <p id="footer-text">&copy; 2022 Fausto Torres</p>
+
+        </footer>
+
+
+
+    </h:body>
+</html>
+

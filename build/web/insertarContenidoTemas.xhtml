@@ -1,0 +1,67 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui"
+      xmlns:f="http://java.sun.com/jsf/core">
+    <h:head>
+        <title>ContenidoTemas</title>
+        <h:outputStylesheet library="css" name="index.css"></h:outputStylesheet>
+    </h:head>
+    <h:body>
+        <div id="main-header">
+            <a id="logo-header">
+                <span class="site-name">LS Len</span>
+            </a>
+           
+                <ul class="nav">
+                    <li><a href="temasAdmin.xhtml">Contenido</a></li>
+                    
+                    <li><a href="index.xhtml">Salir</a></li>
+                </ul>
+            
+        </div>
+
+
+        <div id="boxDos">
+            <h1>Ingreso del Contenidos de Temas</h1>
+            <h:form>
+                
+                <h:panelGrid columns="2">
+                    <h:outputText value="idTema"></h:outputText>
+                    <p:inputText value="#{NewJSFManagedAdmin.tema.idtema}"></p:inputText>
+                    <h:outputText value="Nombre del tema"></h:outputText>
+                    <p:inputText value="#{NewJSFManagedAdmin.tema.texto}"></p:inputText>
+                    <h:outputText value="Imagen"></h:outputText>
+                    <p:inputText value="#{NewJSFManagedAdmin.tema.imagen}"></p:inputText>
+                    <h:outputText value="Video"></h:outputText>
+                    <p:inputText value="#{NewJSFManagedAdmin.tema.video}"></p:inputText>
+                     <h:outputText value="Descripcion del tema"></h:outputText>
+                    <p:inputTextarea value="#{NewJSFManagedAdmin.tema.descripciontema}"></p:inputTextarea>
+                    <h:outputText value="Seleccione Contenido"></h:outputText>
+                    <p:selectOneMenu id="contenido" value="#{NewJSFManagedAdmin.idcontenido}">
+                        <f:selectItem itemLabel="Selecciona Contenido" itemValue=""></f:selectItem>
+                        <f:selectItems value="#{NewJSFManagedAdmin.listaContenido}" var="lisC" itemLabel="#{lisC.idcontenido}"></f:selectItems>
+                    </p:selectOneMenu>
+                   
+                    <p:commandButton value="Grabar" id="btnGrabar" action="#{NewJSFManagedAdmin.guardarTema()}"></p:commandButton>
+                     
+                </h:panelGrid>
+                
+            </h:form>
+
+
+
+
+        </div>
+
+        <footer id="main-footer-contenido">
+            <p id="footer-text">&copy; 2022 Fausto Torres</p>
+
+        </footer>
+
+
+
+    </h:body>
+</html>
+

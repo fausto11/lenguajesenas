@@ -1,0 +1,161 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>ContenidoTemas</title>
+        <h:outputStylesheet library="css" name="index.css"></h:outputStylesheet>
+    </h:head>
+    <h:body>
+        
+        <div id="main-header">
+            <a id="logo-header">
+                <span class="site-name">LS Len</span>
+            </a>
+
+            <ul class="nav">
+                <li><a href="index.xhtml">Salir</a></li>
+                <li><a href="temasAdmin.xhtml">Inicio</a></li> 
+                <li><a href="">Crear</a>
+                    <ul>
+                        <li><a href="crearCuentaAdmin.xhtml">Crear Cuenta</a></li>
+                        <li><a href="insertarContenido.xhtml">Crear Temas</a></li>
+                        <li><a href="insertarContenidoTemas.xhtml">Crear Contenido</a></li>
+                    </ul>
+                </li> 
+                
+            </ul>
+
+        </div>
+        
+        
+        <div >
+            <h1>Expresiones</h1>
+
+            <p:tabView  id="tabUno" orientation="left" dynamic="true">
+
+
+                <p:tab  title="¿dónde?">
+                    <div id="imagen-tab">
+                        <p:graphicImage value="#{NewJSFManagedAdmin.tema.imagen}"></p:graphicImage>
+
+                        <h:outputText value="#{NewJSFManagedAdmin.tema.descripciontema}" ></h:outputText>
+                        <img src="resources/img/frases/donde.png"></img>
+                        <p>Expresión referida para preguntar en qué
+                            lugar se encuentra algo.
+                            Las manos se mueven de adentro hacia fuera
+                            simultáneamente varias veces. La boca está
+                            en forma de beso abierto.</p>
+                    </div>   
+                </p:tab>
+                <p:tab  title="Cuánto">
+                    <div id="imagen-tab">
+                        <img src="resources/img/frases/cuanto.png"></img>
+                        <p>Expresión usada para preguntar el número
+                            exacto de algo.
+                            Las manos empiezan en puño y los dedos
+                            se extienden uno por uno. La boca está en
+                            forma de beso.</p>
+                    </div>   
+                </p:tab>
+                <p:tab  title="¿Para qué?">
+                    <div id="imagen-tab">
+                        <img src="resources/img/frases/paraque.png"></img>
+                        <p>Expresión usada para preguntar sobre la
+                            necesidad de llevar a cabo una actividad.
+                            Las manos bajan dos veces. El ceño se
+                            frunce, los dientes muerden el labio inferior.</p>
+                    </div>   
+                </p:tab>
+                <p:tab  title="¿qué dice?">
+                    <div id="imagen-tab">
+                        <img src="resources/img/frases/quedice.png"></img>
+                        <p>Acontecimiento reciente.
+                            Ademas puede ser usada para la siguiente expresión:
+                            ¿qué me cuentas?
+                            Expresión usada para preguntar a alguna
+                            persona si tiene novedades respecto a algo.
+                            La mano toca el mentón dos veces. Se ven
+                            los dientes juntos.</p>
+                    </div>   
+                </p:tab>
+                <p:tab title="¿qué?">
+                    <div id="imagen-tab">
+                        <img src="resources/img/frases/que.png"></img>
+                        <p>Pronombre que se refiere a algo que se
+                            desconoce.
+                            EL índice se desplaza hacia abajo tocando
+                            la palma de la mano contraria.
+                            La boca está semiabierta.</p>
+                    </div>   
+                </p:tab>
+                <p:tab title="vivir">
+                    <div id="imagen-tab">
+                        <img src="resources/img/frases/vivir.png"></img>
+                        <p>Habitar en algún lugar de manera permanente.
+                            Tener vida.
+                            Las manos se deslizan por el pecho hacia arriba</p>
+                    </div>   
+                </p:tab>
+                <p:tab title="Universidad">
+                    <div id="imagen-tab">
+                        <img src="resources/img/frases/Universidad.png"></img>
+                        <p>Institución educativa posterior al bachillerato, que
+                            ofrece varias carreras y títulos de especialización.
+                            La mano toca el hombro dos veces mientras
+                            sube en cuerva con movimientos cortos.</p>
+                    </div>   
+                </p:tab>
+                <p:tab title="Ustedes">
+                    <div id="imagen-tab">
+                        <img src="resources/img/frases/ustedes.png"></img>
+                        <p>Segunda persona del plural.
+                            La mano se desliza en curva de adentro hacia
+                            fuera.</p>
+                    </div>   
+                </p:tab>
+                <p:tab title="Taxi">
+                    <div id="imagen-tab">
+                        <img src="resources/img/frases/taxi.png"></img>
+                        <p>Auto que efectúa recorridos cobrados.
+                            La mano de arriba se desliza de adentro
+                            hacia fuera varias veces.</p>
+                    </div>   
+                </p:tab>
+                <p:tab title="Por favor">
+                    <div id="imagen-tab">
+                        <img src="resources/img/frases/porfavor.png"></img>
+                        <p>Auto que efectúa recorridos cobrados.
+                            La mano de arriba se desliza de adentro
+                            hacia fuera varias veces.</p>
+                    </div>   
+                </p:tab>
+                <p:tab title="Gracias">
+                    <div id="imagen-tab">
+                        <img src="resources/img/frases/gracias.png"></img>
+                        <p>Expresión usada para demostrar
+                            agradecimiento.
+                            La mano se separa del mentón hacia la
+                            palma contaría. El rostro sonríe.</p>
+                    </div> 
+                    <div>
+                        <p:button value="Ir a Evaluación" href="test.xhtml" styleClass="ui-button-info"></p:button>   
+                    </div>
+
+                </p:tab>
+
+            </p:tabView>
+
+        </div>
+
+        <footer id="main-footer-contenido">
+            <p id="footer-text">&copy; 2022 Fausto Torres</p>
+
+        </footer>
+
+
+
+    </h:body>
+</html>
+

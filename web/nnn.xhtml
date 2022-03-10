@@ -1,0 +1,45 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>Facelet Title</title>
+        <h:outputStylesheet library="css" name="index.css"></h:outputStylesheet>
+    </h:head>
+    <h:body>
+        <div id="main-header">
+            <a id="logo-header">
+                <span class="site-name">LS Len</span>
+            </a>
+            <nav>
+                <ul>
+                    <li><a>Identificarse</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div  class="box">  
+            <h:form id="formulario-ingreso">
+                <p:messages autoUpdate="true" showDetail="true"></p:messages>
+                <p:panelGrid columns="2" style="text-align: center">
+                    <h:outputText value="#{JSFManagedBean.usuario.idrole} " ></h:outputText>
+                   
+                    <h:outputText value="Contraseña: "></h:outputText>
+                   
+                     
+                    <p:commandButton ajax="false" value="Acceder" action="#{JSFManagedLogin.inicioSesion()}" ></p:commandButton>
+                   
+                    <p:button value="Crear Cuenta" href="crearCuenta.xhtml" styleClass="ui-button-info" ></p:button>
+                </p:panelGrid>
+            </h:form>
+        </div>
+
+        <footer id="main-footer">
+            <p id="footer-text">&copy; 2022 Fausto Torres</p>
+
+        </footer>
+
+
+    </h:body>
+</html>
+

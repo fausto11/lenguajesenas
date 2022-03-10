@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:p="http://primefaces.org/ui">
+    <h:head>
+        <title>ContenidoTemas</title>
+        <h:outputStylesheet library="css" name="index.css"></h:outputStylesheet>
+    </h:head>
+    <h:body>
+        <div id="main-header">
+            <a id="logo-header">
+                <span class="site-name">LS Len</span>
+            </a>
+            
+                <ul class="nav">
+                    <li><a href="temasAdmin.xhtml">Contenido</a></li>
+                    <li><a href="contenido.xhtml">insertar</a></li>
+                    <li><a href="index.xhtml">Salir</a></li>
+                </ul>
+            
+        </div>
+
+
+        <div id="boxDos">
+            <h1>Ingreso de Contenido</h1>
+            <h:form>
+                <h:panelGrid columns="1">
+                    <h:outputText value="idContenido"></h:outputText>
+                    <p:inputText value="#{NewJSFManagedAdmin.contenido.idcontenido}"></p:inputText>
+                    <h:outputText value="Nombre del Contenido"></h:outputText>
+                    <p:inputText value="#{NewJSFManagedAdmin.contenido.nombrecontenido}"></p:inputText>
+                    <h:outputText value="Descripción"></h:outputText>
+                    <p:inputTextarea value="#{NewJSFManagedAdmin.contenido.descripcion}"></p:inputTextarea>
+                    <p:commandButton value="Grabar" id="btnGrabar" action="#{NewJSFManagedAdmin.guardarContenido()}"></p:commandButton>
+                </h:panelGrid>
+            </h:form>
+
+
+
+
+        </div>
+
+        <footer id="main-footer-contenido">
+            <p id="footer-text">&copy; 2022 Fausto Torres</p>
+
+        </footer>
+
+
+
+    </h:body>
+</html>
+
